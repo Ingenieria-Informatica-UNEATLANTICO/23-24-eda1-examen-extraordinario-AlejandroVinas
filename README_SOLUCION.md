@@ -1,1 +1,1 @@
-a
+El método para cambiar la creacion de la hamburguesa seria tratándola con listas de forma que , en caso de querer eliminar alguno de sus elementos, se pueda eliminar sin problemas; tambien esto permitiria dar mas flexibilidad al código, permitiendo añadir mas elementos a la hamburguesa que se esta creando, ya sean estos mas panes intermedios, salsas o mas elementos asi como alterar el orden de los mismos.
