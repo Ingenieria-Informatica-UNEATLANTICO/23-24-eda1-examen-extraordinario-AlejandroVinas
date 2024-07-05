@@ -1,0 +1,112 @@
+@startuml
+abstract class Empleado {
+   # Hamburguesa hamburguesa
+   # boolean tieneHamburguesa
+
+   +Empleado()
+}
+abstract class Ingrediente {
+   # nombre: String
+
+   +describir(): String
+   +abstract void mostrar()
+}
+abstract class Extra extends Ingrediente {
+   # Extra(String nombre)
+}
+abstract class Carne extends Ingrediente {
+   -coccion: String
+
+   +Carne(String nombre, String coccion)
+   +describir(): String
+   +abstract void mostrar()
+}
+class Integral extends Pan{
+    final REPRESENTACION : String
+
+    +Integral()
+    +void mostrar()
+}
+abstract class Pan extends Ingrediente {
+    # Pan(String nombre)
+}
+abstract class Salsa extends Extra {
+    - cantidad: String
+
+    #Salsa(String nombre, String cantidad)
+    +describir(): String
+    +abstract void mostrar()
+}
+class Ketchup extends Salsa{
+    final REPRESENTACION : String
+
+    +Ketchup(String cantidad)
+    +void mostrar()
+}
+class Mayonesa extends Salsa{
+    final REPRESENTACION : String
+
+    +Mayonesa(String cantidad)
+    +void mostrar()
+}
+class panInter extends Extra{
+    +panInter()
+    +void mostrar()
+}
+class Pollo extends Carne{
+    final REPRESENTACION : String
+
+    +Pollo(String coccion)
+    +void mostrar()
+}
+abstract class Queso extends Extra {
+    # Queso(String nombre)
+}
+class Cheddar extends Queso{
+    final REPRESENTACION : String
+
+    +Cheddar()
+    +void mostrar()
+}
+class Brioche extends Pan{
+    final REPRESENTACION : String
+
+    +Brioche()
+    +void mostrar()
+}
+class Azul extends Queso{
+    final REPRESENTACION : String
+
+    +Azul()
+    +void mostrar()
+}
+class Restaurante{
+ -void atender()
+ -static void main(String[] args)
+}
+class Res extends Carnes{
+    +Res(String coccion)
+    +void mostrar()
+}
+class Cocinero extends Empleado{
+    + void prepararHamburguesa()
+    +entregar(): Hamburguesa
+}
+class Camarero extends Empleado{
+    +void recibir(Hamburguesa hamburguesa)
+    +void servir()
+}
+class Huevo extends Extra{
+    final REPRESENTACION : String
+
+    +Huevo()
+    +void mostrar()
+}
+class Integral extends Pan{
+    final REPRESENTACION : String
+
+    +Integral()
+    +void mostrar()
+}
+
+@enduml
